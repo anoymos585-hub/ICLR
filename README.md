@@ -36,7 +36,7 @@ Run ```./ablation_OOD.sh``` for negative intervention of OOD datasets
 Run ```./ablation_cot.sh``` for negative intervention of influence of low-level cognitive heads for high-order function
 
 
-### Second Step: Positive Intervention
+### Third Step: Positive Intervention
 Run ```python get_activations_inter.py```
 Run ```python get_topk_tokens_by_answer_inter.py```
 
@@ -44,4 +44,5 @@ Run ```cd positive_intervention```
 Run ```./ablation_task_recorrect_ID.sh``` for positive intervention in domain
 
 Run ```./ablation_task_recorrect_OOD.sh``` for positive intervention out of domain
+
 
