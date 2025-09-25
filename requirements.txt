@@ -1,0 +1,61 @@
+# Core ML and Deep Learning
+torch>=2.0.0
+transformers==4.56.2
+pyvene
+
+# Data Processing and Numerical Computing
+numpy>=1.21.0
+pandas>=1.3.0
+scikit-learn>=1.0.0
+einops>=0.6.0
+
+# Progress Bars and Visualization
+tqdm>=4.62.0
+matplotlib>=3.5.0
+
+# Computer Vision and Image Processing
+PIL>=8.3.0
+Pillow>=8.3.0
+torchvision>=0.15.0
+decord>=0.6.0
+
+# API and Async
+openai>=1.0.0
+aiohttp>=3.8.0
+tiktoken>=0.4.0
+
+# Evaluation and NLP Metrics
+evaluate>=0.4.0
+nltk>=3.7
+
+# Data Serialization
+pickle5; python_version < '3.8'
+
+# Utilities
+joblib>=1.1.0
+argparse  # built-in, but some environments may need explicit install
+
+# Model-specific dependencies
+qwen-vl-utils  # For Qwen VL models
+
+# VLLM for serving (optional, for the server command)
+vllm>=0.2.0
+
+# Additional transformers-related packages
+accelerate>=0.20.0
+datasets>=2.10.0
+
+# Logging and utilities (mostly built-in but listed for completeness)
+logging  # built-in
+json  # built-in
+os  # built-in
+sys  # built-in
+time  # built-in
+re  # built-in
+random  # built-in
+copy  # built-in
+ast  # built-in
+asyncio  # built-in
+
+# Optional GPU acceleration
+# cuda-toolkit  # Uncomment if needed for CUDA support
