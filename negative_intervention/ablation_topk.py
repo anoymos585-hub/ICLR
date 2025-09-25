@@ -316,9 +316,7 @@ if __name__ == "__main__":
     }
     evaluate_model = SentenceTransformer('all-MiniLM-L6-v2')
     
-    # path = '/data/projects/punim1970/nips2025/LLM_reasoning/dataset/cot_test_data.json'
-    # if args.dataset_name == "cot_qa": 
-    #     dataset = json.load(open(path, "r"))    
+  
     dataset = json.load(open(f'../dataset/test_1000_final.json'))
     dataset_name = f'test_1000'
     check_dataset = json.load(open(f'../head_results/output_{args.model_name}_test_1000_test_with_gpt_label.json'))
@@ -336,17 +334,10 @@ if __name__ == "__main__":
             images_list[label].append(image)
             original_questions_list[label].append(original_question)
             subquestions_list[label].append(subquestion)
-    # if args.function_name == "Retrieval":
-    #     head_features = [434, 438, 489, 549, 459, 439, 953, 490, 488, 491]
-    #     # head_features = random.sample(range(1024), 500)
-    # elif args.function_name == "Math Calculation":
-    #     head_features = [432, 435, 1006, 458, 456, 955, 729, 778, 829, 728]
-    # with open(f"/data/projects/punim1970/nips2025/LLM_reasoning/main_results/{args.model_name}/layer_{args.use_layer_bias}_position_{args.token_use}.json", "r") as f:
-    #     importances = json.load(f)
+
     with open(f"../main_results/{args.model_name}/importance_{args.model_name}_{args.token_use}_indices_{args.use_layer_bias}.json", "r") as f:
         importances = json.load(f)
-    # with open(f"/data/projects/punim1970/nips2025/LLM_reasoning/rebuttal_results/logistic_regression/importance_{args.model_name}.json", "r") as f:
-    #     importances = json.load(f)
+
     with open(f"../main_results/{args.model_name}/importance_{args.model_name}_{args.token_use}_scores_{args.use_layer_bias}.json", "r") as f:
         importance_scores = json.load(f)
     elbow = {}

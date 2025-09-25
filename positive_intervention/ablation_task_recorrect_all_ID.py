@@ -850,7 +850,7 @@ if __name__ == "__main__":
     #     head_dim = model.config.head_dim
     # else:
     #     head_dim = hidden_size // num_heads    
-    with open(f'/data/projects/punim1996/Data/ICLR2025_vlm/model_config.json', "r") as f:
+    with open(f'../model_config.json', "r") as f:
         model_config = json.load(f)
     for config in model_config:
         if config["model_name"] == args.model_name:
